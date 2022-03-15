@@ -203,6 +203,7 @@ body{
     /* justify-content: space-between; */
 }
 
+/* FIXME:SISTEMARE LA SCROLLBAR  */
 .chat-list{
     overflow-y:scroll;
     /* height: calc( 90vh - 194px );  */
@@ -234,12 +235,6 @@ body{
     flex-grow: 1;
 }
 
-
-
-.right-section-size.proprieties{
-   
-}
-
 .right-section-size .text-chat-form{
     justify-content: center;
     padding-left: 10px;
@@ -259,6 +254,7 @@ body{
     height: calc(90vh - 70px);
     overflow-y: scroll;
     padding-top: 50px;
+    overflow-x:hidden;
 }
 
 .my-chat-box{
@@ -275,6 +271,7 @@ body{
     padding: .8rem;
     justify-content: space-between;
 }
+/* <!-- FIXME:NON SI ALLUNGA LA FINESTRA DELLA CHAT CON UNA PAROLA LUNGA  --> */
 .my-chat p{
     overflow-wrap: break-word;
 }
@@ -305,6 +302,11 @@ body{
     font-size: .7rem;
     position: relative;
     top: 15px;
+}
+
+.write-text-bar{
+    background-color: #f3eeea;
+    height: 4rem;
 }
 
 

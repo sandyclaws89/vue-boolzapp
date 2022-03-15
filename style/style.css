@@ -4,7 +4,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body{
     height: 100vh;
     background-color: #dadbd3;
@@ -14,18 +13,17 @@ body{
     height: 15vh;
     background-color: #009688;
 }
-
+/* ------------------------------------- */
 /* GENERIC CLASS */
 .flex-row{
     display: flex;
     flex-direction: row; 
 }
-
 .flex-column{
     display: flex;
     flex-direction: column; 
 }
-
+/* ------------------------------------- */
 
 .main-size {
     width: 1400px;
@@ -48,6 +46,24 @@ body{
     border-right: solid #d6d6d6;
     border-width: .1.2rem;
 }
+.chat{
+    height: 80px;
+    background-color: coral;
+}
+
+.chat.proprieties{
+    align-items:center;
+    padding:0 10px;
+    justify-content: space-between;
+}
+
+.avatar-size{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: white;
+}
 
 .left-header-size {
     width: calc(500px - .1.2 rem);
@@ -67,13 +83,15 @@ body{
     background-color: #eaeaea;
 }
 
+
+
 .right-header-size-proprieties{
 
 }
 
 .right-section-size {
     width: 750px;
-    background-color: royalblue;
+    background-image:url(../img/mine.jpg);
     height: 100%;
     flex-grow: 1;
 }
@@ -83,13 +101,6 @@ body{
 }
 
 
-.avatar-size{
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    overflow: hidden;
-    background-color: white;
-}
 
 /* FORM MY AVATAR  */
 .left-header-size :first-child {

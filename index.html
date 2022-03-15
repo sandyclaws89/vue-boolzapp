@@ -1,87 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-</head>
-<body>
-  
+    <link rel="stylesheet" href="style/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
     <div class="background"></div>
 
-        <main class="flex-row main-size proprieties">
+    <main class="flex-row main-size proprieties">
+      <!-- LEFT SIZE  -->
+      <section class="left-section-size proprieties">
+        <header class="left-header-size proprieties flex-row">
+          <div class="flex-row">
+            <img src="img/avatar_io.jpg" class="avatar-size" alt="" />
+            <div class="text-chat-form">
+                <span>Sofia</span>
+            </div>
+            
+          </div>
+          <div class="flex-row">
+            <i class="fa-solid fa-circle-notch"></i>
+            <i class="fa-solid fa-message"></i>
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+          </div>
+        </header>
 
-            <!-- LEFT SIZE  -->
-            <section class="left-section-size proprieties">
+        <!-- NEW NOTIFICATION  -->
+        <div class="new-notifications flex-row">
+          <div class="flex-row">
+            <div class="notification-box">
+              <i class="fa-solid fa-bell-slash"></i>
+            </div>
+          </div>
+          <div class="flex-column notification-text">
+            <span>Ricevi notifiche di nuovi messaggi</span>
+            <a href="">Attiva notifiche desktop</a>
+          </div>
+        </div>
+        <div class="input-bar flex-row">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input
+            type="search"
+            class="input-search"
+            placeholder="Cerca o inizia una nuova chat"
+          />
+        </div>
 
-                <header class="left-header-size proprieties flex-row">
-                    <div class="flex-row">
-                        <img src="img/avatar_io.jpg" class="avatar-size" alt="">
-                        <span>Sofia</span>
-                    </div>
-                    <div class="flex-row">
-                        <i class="fa-solid fa-circle-notch"></i>
-                        <i class="fa-solid fa-message"></i>
-                        <i class="fa-solid fa-ellipsis-vertical"></i>
-                    </div>
-                </header> 
+        <section class="chat-list flex-column">
+          <div class="chat flex-row proprieties">
+            <div>
+              <img src="img/avatar_1.jpg" class="avatar-size" alt="" />
+            </div>
+            <div class="flex-row text-hour-form">
+              <div class="flex-column notification-text">
+                <span>Michele</span>
+                <span>Ultimo messaggio inviato</span>
+              </div>
+              <div class="hour">
+                <span>12:00</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
 
-                <!-- NEW NOTIFICATION  -->
-                <div class="new-notifications flex-row">
-                    <div class="flex-row">
-                        <div class="notification-box">
-                            <i class="fa-solid fa-bell-slash"></i>
-                        </div>
-                    </div>
-                    <div class="flex-column notification-text">
-                        <span>Ricevi notifiche di nuovi messaggi</span>
-                        <a href="">Attiva notifiche desktop</a>
-                    </div>
-                </div>
-                <div class="input-bar flex-row">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="search" class="input-search" placeholder="Cerca o inizia una nuova chat">
-                </div>
+      <!-- RIGHT SIDE -->
+      <section class="right-section-size proprieties">
+        <header class="flex-row right-header-size proprieties">
+          <div class="flex-row">
+            <img src="img/avatar_1.jpg" alt="" class="avatar-size"/>
+            <div class="flex-column text-chat-form ">
+                <span>Michele</span>
+                <span>Ultimo messaggio inviato oggi alle 12:00</span>
+            </div>
+            
+          </div>
+          <div class="flex-row">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-paperclip"></i>
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+          </div>
+        </header>
+
+        <section class="current-chat-window flex-row">
+            <!-- <div class="flex-column interlocutor-chat-box" >
+                -->
+                <!-- <p class="interlocutor-chat flex-row">Tutto fatto!</p> -->
+            <!-- </div> -->
+            <div class="my-chat-box flex-column">
                 
+                <p class="my-chat">Hai portato a spasso il cane?</p>
+                <p class="my-chat"> Ricordati di stendere i panni</p>
+            </div>
 
-                <section class="chat-list flex-column">
-                    <div class="chat flex-row proprieties">
-                        
-                            <img src="img/avatar_1.jpg" class="avatar-size " alt="">
-                            <div>
-                            <div class="flex-column notification-text">
-                                <span>Michele</span>
-                                <span>Ultimo messaggio inviato</span>
-                            </div>
-                        </div>
-                        <div class="hour">
-                            <span>12:00</span>
-                        </div>                       
-                        
-                    </div>
-                </section>  
-            </section>
+        </section>
+      </section>
+    </main>
 
-
-            <!-- RIGHT SIDE -->
-            <section class="right-section-size proprieties">
-                    
-                <header class="right-header-size proprieties">
-                    
-                </header>
-
-                <section class="">
-
-                </section>
-     
-            </section>
-        </main>
-   
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="script/"></script>
-</body>
+  </body>
 </html>

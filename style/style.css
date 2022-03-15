@@ -258,40 +258,53 @@ body{
     background-image:url(../img/mine.jpg);
     height: calc(90vh - 70px);
     overflow-y: scroll;
-    align-items: flex-start;
-    /* justify-content: space-around; */
-    flex-wrap: wrap;
+    padding-top: 50px;
 }
 
 .my-chat-box{
-    width: 50%;
-    background-color: #009688;
-
+    width: 100%;
+    align-items: flex-end;
+    padding-right: 70px;
 }
 
 .my-chat{
-    width: 100%;
+    width: 40%;
     background-color: #d5f9ba;
     border-radius: 4px;
-    min-height: 50px ;
-    border: solid black;
     margin: 5px;
+    padding: .8rem;
+    justify-content: space-between;
+}
+.my-chat p{
+    overflow-wrap: break-word;
+}
+.my-chat span{
+    color:#b6b9bb;
+    font-size: .7rem;
+    position: relative;
+    top: 15px;
 }
 
 
 .interlocutor-chat{
-    /* width: 50%; */
+    width: 40%;
     background-color: white;
     border-radius: 4px;
-    min-height: 50px ;
-    border: solid black;
-    align-items: center;
-
+    margin: 5px;
+    padding: .8rem;
+    overflow-wrap: break-word;
+    justify-content: space-between;
 }
 .interlocutor-chat-box{
-    width: 50%;
-    background-color: #6b7376;
-    align-items: center;
+    width: 100%;
+    align-items: flex-start;
+    padding-left: 70px;
+}
+.interlocutor-chat span{
+    color:#b6b9bb;
+    font-size: .7rem;
+    position: relative;
+    top: 15px;
 }
 
 

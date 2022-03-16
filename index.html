@@ -94,7 +94,8 @@
           <!-- CURRENT CHAT WINDOW -->
           <section class="current-chat-window flex-column">
             <!-- MY CHAT -->
-            <div v-for="element in chatList[test].messages" :class="{interlocutor-chat-box: element.sent, my-chat-box: !element.sent }">
+            <!-- FIXME:NON FUNZIONA  -->
+            <div v-for="element in chatList[test].messages" :class="{ interlocutor-chat-box:element.sent, my-chat-box:!element.sent }">
               <div  class="my-chat-box flex-column">
                 <div class="my-chat flex-row">
                   <p>{{element.message}}</p>

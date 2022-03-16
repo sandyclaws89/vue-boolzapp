@@ -57,10 +57,10 @@
 
           <!-- CHAT LIST -->
           <section class="chat-list flex-column">
-            <div class="chat flex-row proprieties">
-              <!-- <div> -->
-               <img src="img/avatar_1.jpg" class="avatar-size" alt="" />
-              <!-- </div> -->
+            <div v-for="element in chatList" class="chat flex-row proprieties">
+              <div>
+               <img :src="'img/' + element.pic" class="avatar-size" alt="" />
+              </div>
               <div class="flex-row text-hour-form">
                 <div class="flex-column notification-text">
                   <span> {{element.name}}</span>
@@ -92,31 +92,37 @@
             </div>
           </header>
 
-          <!-- CURRENT CHAT WINDOW -->
-
+          <!-- CURRENT CHAT WINDOW -->      
           <section class="current-chat-window flex-column">
-            <div class="my-chat-box flex-column">
+
+            <!-- MY CHAT -->
+            <div v-for="(element, i) in myMessage">
+
+            
+            <div  class="my-chat-box flex-column">
               <div class="my-chat flex-row">
                 <p>
-                  Hai portato a spasso il
-                  cane?aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                 {{element.chat1[i]}}
                 </p>
                 <span>15:30</span>
               </div>
             </div>
+
             <div class="my-chat-box flex-column">
               <div class="my-chat flex-row">
                 <p>
-                  Ricordati di stendere i
-                  panniaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                  {{element.chat1[i]}}
                 </p>
                 <span>15:50</span>
               </div>
             </div>
 
-            <div class="interlocutor-chat-box flex-column">
-              <div class="interlocutor-chat flex-row">
-                <p>Tutto fatto!</p>
+          </div>
+
+            <!-- INTERLOCUTOR CHAT  -->
+            <div  class="interlocutor-chat-box flex-column">
+              <div v-for="(element) in chatList" class="interlocutor-chat flex-row">
+                <p>{{element.chat}}</p>
                 <span>16:15</span>
               </div>
             </div>
@@ -160,7 +166,6 @@
         </section>
       </main>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="script/script.js"></script>
   </body>

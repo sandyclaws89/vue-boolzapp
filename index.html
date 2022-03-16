@@ -57,11 +57,11 @@
 
           <!-- CHAT LIST -->
           <section class="chat-list flex-column">
-            <div v-for="element in chatList" class="chat flex-row proprieties">
+            <div v-for="(element,index) in chatList" @click="test = index" class="chat flex-row proprieties">
               <div>
                 <img :src="'img/' + element.pic" class="avatar-size" alt="" />
               </div>
-              <div v-for="(element,index) in chatList" @click="test = index" class="flex-row text-hour-form">
+              <div class="flex-row text-hour-form">
                 <div class="flex-column notification-text">
                   <span> {{element.name}}</span>
                   <span>Ultimo messaggio inviato</span>
@@ -94,7 +94,7 @@
           <!-- CURRENT CHAT WINDOW -->
           <section class="current-chat-window flex-column">
             <!-- MY CHAT -->
-            <div v-for="element in chatList[test].messages">
+            <div v-for="element in chatList[test].messages" :class="{interlocutor-chat-box: element.sent, my-chat-box: !element.sent }">
               <div  class="my-chat-box flex-column">
                 <div class="my-chat flex-row">
                   <p>{{element.message}}</p>
@@ -111,14 +111,14 @@
             </div>
 
             <!-- INTERLOCUTOR CHAT  -->
-            <div class="interlocutor-chat-box flex-column">
+            <!-- <div class="interlocutor-chat-box flex-column">
               <div v-for="(element) in messages"
                 class="interlocutor-chat flex-row"
               >
                 <p>{{element.message}}</p>
                 <span>16:15</span>
               </div>
-            </div>
+            </div> -->
 
             <!-- <div class="my-chat-box flex-column">
               <div class="my-chat flex-row">

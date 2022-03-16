@@ -44,7 +44,7 @@
               <a href="">Attiva notifiche desktop</a>
             </div>
           </div>
-          
+
           <!-- SEARCH CHAT BAR  -->
           <div class="input-bar flex-row">
             <i class="fa-solid fa-magnifying-glass"></i>
@@ -59,7 +59,7 @@
           <section class="chat-list flex-column">
             <div v-for="element in chatList" class="chat flex-row proprieties">
               <div>
-               <img :src="'img/' + element.pic" class="avatar-size" alt="" />
+                <img :src="'img/' + element.pic" class="avatar-size" alt="" />
               </div>
               <div class="flex-row text-hour-form">
                 <div class="flex-column notification-text">
@@ -68,10 +68,9 @@
                 </div>
                 <div class="hour">
                   <span>12:00</span>
-                </div>           
+                </div>
               </div>
             </div>
-            
           </section>
         </section>
 
@@ -92,42 +91,36 @@
             </div>
           </header>
 
-          <!-- CURRENT CHAT WINDOW -->      
+          <!-- CURRENT CHAT WINDOW -->
           <section class="current-chat-window flex-column">
-
             <!-- MY CHAT -->
-            <div v-for="(element, i) in myMessage">
+            <div v-for="(element, i) in chatList.messages">
+              <div  class="my-chat-box flex-column">
+                <div class="my-chat flex-row">
+                  <p>{{element}}</p>
+                  <span>15:30</span>
+                </div>
+              </div>
 
-            
-            <div  class="my-chat-box flex-column">
-              <div class="my-chat flex-row">
-                <p>
-                 {{element.chat1[i]}}
-                </p>
-                <span>15:30</span>
+              <div class="my-chat-box flex-column">
+                <div class="my-chat flex-row">
+                  <p>{{element[i]}}</p>
+                  <span>15:50</span>
+                </div>
               </div>
             </div>
-
-            <div class="my-chat-box flex-column">
-              <div class="my-chat flex-row">
-                <p>
-                  {{element.chat1[i]}}
-                </p>
-                <span>15:50</span>
-              </div>
-            </div>
-
-          </div>
 
             <!-- INTERLOCUTOR CHAT  -->
-            <div  class="interlocutor-chat-box flex-column">
-              <div v-for="(element) in chatList" class="interlocutor-chat flex-row">
-                <p>{{element[0]}}</p>
+            <div class="interlocutor-chat-box flex-column">
+              <div v-for="(element) in messages"
+                class="interlocutor-chat flex-row"
+              >
+                <p>{{element.message}}</p>
                 <span>16:15</span>
               </div>
             </div>
 
-            <div class="my-chat-box flex-column">
+            <!-- <div class="my-chat-box flex-column">
               <div class="my-chat flex-row">
                 <p>
                   Ricordati di stendere i panni
@@ -145,7 +138,7 @@
                 </p>
                 <span>16:15</span>
               </div>
-            </div>
+            </div> -->
           </section>
           <section class="write-text-bar flex-row">
             <!-- <div> -->

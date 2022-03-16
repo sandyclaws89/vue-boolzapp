@@ -1,6 +1,7 @@
 const app = new Vue({
     el:'#root',
     data :{
+        test : 0,
         chatList:[
             {
                 pic:"../img/avatar_1.jpg",

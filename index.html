@@ -55,18 +55,18 @@
 
           <!-- CHAT LIST -->
           <section class="chat-list flex-column">
-            <div class="chat flex-row proprieties">
+            <div v-for="(element) element in chatList" class="chat flex-row proprieties">
               <div>
-                <img src="img/avatar_1.jpg" class="avatar-size" alt="" />
+               <img src="img/avatar_1.jpg" class="avatar-size" alt="" />
               </div>
               <div class="flex-row text-hour-form">
                 <div class="flex-column notification-text">
-                  <span>Michele</span>
+                  <span> {{element.name}}</span>
                   <span>Ultimo messaggio inviato</span>
                 </div>
                 <div class="hour">
                   <span>12:00</span>
-                </div>
+                </div>           
               </div>
             </div>
             

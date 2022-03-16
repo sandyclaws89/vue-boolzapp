@@ -50,7 +50,7 @@ const app = new Vue({
                 lastMessage: "Ultimo messaggio inviato",
                 time:"12.00",
             },
-        ]
-    }
+        ],
+    },
 })
 console.log(chatList.pic)

@@ -44,6 +44,8 @@
               <a href="">Attiva notifiche desktop</a>
             </div>
           </div>
+          
+          <!-- SEARCH CHAT BAR  -->
           <div class="input-bar flex-row">
             <i class="fa-solid fa-magnifying-glass"></i>
             <input
@@ -55,10 +57,10 @@
 
           <!-- CHAT LIST -->
           <section class="chat-list flex-column">
-            <div v-for="(element) element in chatList" class="chat flex-row proprieties">
-              <div>
+            <div class="chat flex-row proprieties">
+              <!-- <div> -->
                <img src="img/avatar_1.jpg" class="avatar-size" alt="" />
-              </div>
+              <!-- </div> -->
               <div class="flex-row text-hour-form">
                 <div class="flex-column notification-text">
                   <span> {{element.name}}</span>
@@ -160,6 +162,6 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-    <script src="script/"></script>
+    <script src="script/script.js"></script>
   </body>
 </html>

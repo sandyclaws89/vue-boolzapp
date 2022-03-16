@@ -52,5 +52,5 @@ const app = new Vue({
             },
         ],
     },
-})
-console.log(chatList.pic)
+});
+// console.log(chatList.pic)

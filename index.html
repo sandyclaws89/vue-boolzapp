@@ -57,7 +57,11 @@
 
           <!-- CHAT LIST -->
           <section class="chat-list flex-column">
-            <div v-for="(element,index) in chatList" @click="test = index" class="chat flex-row proprieties">
+            <div
+              v-for="(element,index) in chatList"
+              @click="test = index"
+              class="chat flex-row proprieties"
+            >
               <div>
                 <img :src="'img/' + element.pic" class="avatar-size" alt="" />
               </div>
@@ -95,22 +99,24 @@
           <section class="current-chat-window flex-column">
             <!-- MY CHAT -->
             <!-- FIXME:NON FUNZIONA  -->
-            <!-- <div v-for="element in chatList[test].messages" :class="{ interlocutor-chat-box:element.sent, my-chat-box:!element.sent }"> -->
-              <div v-for="element in chatList[test].messages">
-              <div class="flex-column" :class= "element.sent ? 'interlocutor-chat' : 'my-chat'"> 
-                <div class="flex-row">
-                  <p>{{element.message}}</p>
-                  <span>15:30</span>
+            <div v-for="element in chatList[test].messages" :class="element.sent ? 'test-class' : 'my-chat-box'">
+              <div :class="element.sent ? 'interlocutor-chat' : 'my-chat'">
+                <div class="flex-column">
+                  <div class="flex-row">
+                    <p>{{element.message}}</p>
+                    <span>15:30</span>
+                  </div>
                 </div>
               </div>
+            </div>
 
-              <div class="flex-column">
+            <!-- <div class="flex-column">
                 <div class="my-chat flex-row">
                   <p>{{element[i]}}</p>
                   <span>15:50</span>
                 </div>
               </div>
-            </div>
+            </div> -->
 
             <!-- INTERLOCUTOR CHAT  -->
             <!-- <div class="interlocutor-chat-box flex-column">

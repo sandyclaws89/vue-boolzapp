@@ -280,6 +280,7 @@ body{
     margin: 5px;
     padding: .8rem;
     justify-content: space-between;
+    /* align-items: flex-end; */
 }
 /* <!-- FIXME:NON SI ALLUNGA LA FINESTRA DELLA CHAT CON UNA PAROLA LUNGA  --> */
 .my-chat p{
@@ -300,6 +301,7 @@ body{
     padding: .8rem;
     /* overflow-wrap: break-word; */
     justify-content: space-between;
+    /* align-items: flex-start; */
 }
 .interlocutor-chat-box{
     width: 100%;
@@ -329,6 +331,10 @@ body{
     width: 100%;
     height: 2.5rem;
     border:none;
+}
+
+.test-class{
+    align-items: flex-end;
 }
 
 

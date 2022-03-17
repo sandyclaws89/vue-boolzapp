@@ -197,14 +197,16 @@ const app = new Vue({
         // newMessage = this.chatList[this.test].messages[this.test].message      
         //   console.log(this.chatList[this.test].messages[this.test].message)  
         console.log(this.newMessage)
-            this.chatList[this.test].messages[this.test].push(...this.newMessage);
+            this.chatList[this.test].messages[this.test].push({...this.newMessage});
+            this.newMessage.message= '',
         
         // DEVO PUSHARE ALL'ARRAY MESSAGES UN NUOVO OGGETTO    CHE ABBIA DATE MESSAGE E STATUS
         // QUINDI DEVO ESPLODERE ARRAY MESSAGES
-    }
+    
 
         
-    }
+    },
+},
 });
 
 // let bigTest : {

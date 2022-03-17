@@ -96,10 +96,10 @@
           </header>
 
           <!-- CURRENT CHAT WINDOW -->
-          <section class="current-chat-window flex-column">
+          <section v-for="element in chatList[test].messages" class="current-chat-window flex-column" :class="element.sent ? 'interlocutor-chat-box' : 'my-chat-box' ">
             <!-- MY CHAT -->
             <!-- FIXME:NON FUNZIONA  -->
-            <div v-for="element in chatList[test].messages" :class="element.sent ? 'test-class' : 'my-chat-box'">
+            <!-- <div  :class="element.sent ? 'interlocutor-chat-box' : 'my-chat-box'"> -->
               <div :class="element.sent ? 'interlocutor-chat' : 'my-chat'">
                 <div class="flex-column">
                   <div class="flex-row">
@@ -108,7 +108,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            <!-- </div> -->
 
             <!-- <div class="flex-column">
                 <div class="my-chat flex-row">
@@ -148,12 +148,14 @@
               </div>
             </div> -->
           </section>
+
+          <!-- WRITE-TEXT SECTION-->
           <section class="write-text-bar flex-row">
             <!-- <div> -->
             <i class="fa-regular fa-face-smile"></i>
             <!-- </div> -->
             <div class="input-text-down flex-row">
-              <input
+              <input @click="addText"
                 type="searc"
                 name=""
                 id=""

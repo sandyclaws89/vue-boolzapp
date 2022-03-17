@@ -194,5 +194,11 @@ const app = new Vue({
             chat8:['Fa freddo oggi','qui piove'],
         }]
     },
+    
+    methods: {
+        addText() {
+            
+        }
+    }
 });
 // console.log(chatList.pic)

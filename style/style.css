@@ -277,7 +277,7 @@ body{
     width: 40%;
     background-color: #d5f9ba;
     border-radius: 4px;
-    margin: 5px;
+    /* margin: 5px; */
     padding: .8rem;
     justify-content: space-between;
     /* align-items: flex-end; */
@@ -297,7 +297,7 @@ body{
     width: 40%;
     background-color: white;
     border-radius: 4px;
-    margin: 5px;
+    /* margin: 5px; */
     padding: .8rem;
     /* overflow-wrap: break-word; */
     justify-content: space-between;

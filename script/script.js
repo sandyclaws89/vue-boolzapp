@@ -2,7 +2,11 @@ const app = new Vue({
     el:'#root',
     data :{
         test : 0,
-        newMessage : '', 
+        newMessage : {
+            date: '10/01/2020 15:30:55',
+            message: '',
+            sent: false,
+        },
         chatList:[
             {
                 pic:"../img/avatar_1.jpg",
@@ -190,10 +194,12 @@ const app = new Vue({
     methods: {
         addNewMessage() {
         //   newMessage = this.chatList[test].messages[test].message;
-        newMessage = this.chatList[this.test].messages[this.test].message      
-          console.log(this.chatList[this.test].messages[this.test].message)  
+        // newMessage = this.chatList[this.test].messages[this.test].message      
+        //   console.log(this.chatList[this.test].messages[this.test].message)  
         console.log(this.newMessage)
-        // DEVO PUSHARE ALL'ARRAY MESSAGES UN NUOVO OGGETTO CHE ABBIA DATE MESSAGE E STATUS
+            this.chatList[this.test].messages[this.test].push(...this.newMessage);
+        
+        // DEVO PUSHARE ALL'ARRAY MESSAGES UN NUOVO OGGETTO    CHE ABBIA DATE MESSAGE E STATUS
         // QUINDI DEVO ESPLODERE ARRAY MESSAGES
     }
 
@@ -201,14 +207,14 @@ const app = new Vue({
     }
 });
 
-let bigTest : {
-    newTest: 'ciao',
-    arrTest: [{
-        test1: 'value test1',
-        test2: 'value test2',
-    },],
-};
+// let bigTest : {
+//     newTest: 'ciao',
+//     arrTest: [{
+//         test1: 'value test1',
+//         test2: 'value test2',
+//     }],
+// };
 
-console.log(pere.newTest);
+// console.log(pere.newTest);
 
 // console.log(chatList.pic)

@@ -100,54 +100,15 @@
           <section v-for="element in chatList[test].messages" class="current-chat-window flex-column" :class="element.sent ? 'interlocutor-chat-box' : 'my-chat-box' ">
             <!-- MY CHAT -->
             <!-- FIXME:NON FUNZIONA  -->
-            <!-- <div  :class="element.sent ? 'interlocutor-chat-box' : 'my-chat-box'"> -->
               <div :class="element.sent ? 'interlocutor-chat' : 'my-chat'">
                 <div class="flex-column">
                   <div class="flex-row">
-                    <p>{{element.message}}</p>
+                    <p>{{newMessage}}</p>
                     <span>15:30</span>
                   </div>
                 </div>
               </div>
-            <!-- </div> -->
-
-            <!-- <div class="flex-column">
-                <div class="my-chat flex-row">
-                  <p>{{element[i]}}</p>
-                  <span>15:50</span>
-                </div>
-              </div>
-            </div> -->
-
-            <!-- INTERLOCUTOR CHAT  -->
-            <!-- <div class="interlocutor-chat-box flex-column">
-              <div v-for="(element) in messages"
-                class="interlocutor-chat flex-row"
-              >
-                <p>{{element.message}}</p>
-                <span>16:15</span>
-              </div>
-            </div> -->
-
-            <!-- <div class="my-chat-box flex-column">
-              <div class="my-chat flex-row">
-                <p>
-                  Ricordati di stendere i panni
-                  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-                </p>
-                <span>15:50</span>
-              </div>
-            </div>
-
-            <div class="interlocutor-chat-box flex-column">
-              <div class="interlocutor-chat flex-row">
-                <p>
-                  Tutto
-                  fatto!aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-                </p>
-                <span>16:15</span>
-              </div>
-            </div> -->
+           
           </section>
 
           <!-- WRITE-TEXT SECTION-->
@@ -156,7 +117,7 @@
             <i class="fa-regular fa-face-smile"></i>
             <!-- </div> -->
             <div class="input-text-down flex-row">
-              <input v-model="newMessage" @keyup.enter="addText"
+              <input v-model="newMessage" @keyup.enter="addNewMessage"
                 type="searc"
                 name=""
                 id=""

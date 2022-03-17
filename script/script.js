@@ -189,8 +189,10 @@ const app = new Vue({
     
     methods: {
         addNewMessage() {
-          newMessage = this.chatList[test].messages[test].message;      
-          console.log(this.newMessage)  
+        //   newMessage = this.chatList[test].messages[test].message;
+        this.newMessage.push({...this.newMessage }) = (...newMessage)      
+          console.log(this.chatList[this.test].messages[this.test].message)  
+        console.log(this.newMessage)
         }
     }
 });

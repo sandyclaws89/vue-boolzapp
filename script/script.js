@@ -26,6 +26,7 @@ const app = new Vue({
                         message: 'Tutto fatto!',
                         sent: true,
                     }
+
                 ],
             },
             {
@@ -187,7 +188,8 @@ const app = new Vue({
     },
     
     methods: {
-        addNewMessage() {          
+        addNewMessage() {
+          newMessage = this.chatList[test].messages[test].message;      
           console.log(this.newMessage)  
         }
     }

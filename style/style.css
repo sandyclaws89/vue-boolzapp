@@ -299,7 +299,7 @@ body{
     border-radius: 4px;
     margin: 5px;
     padding: .8rem;
-    overflow-wrap: break-word;
+    /* overflow-wrap: break-word; */
     justify-content: space-between;
 }
 .interlocutor-chat-box{

@@ -155,7 +155,7 @@
             <i class="fa-regular fa-face-smile"></i>
             <!-- </div> -->
             <div class="input-text-down flex-row">
-              <input @click="addText"
+              <input v-model="newMessage" @keyup.enter="addText"
                 type="searc"
                 name=""
                 id=""

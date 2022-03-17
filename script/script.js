@@ -2,6 +2,7 @@ const app = new Vue({
     el:'#root',
     data :{
         test : 0,
+        newMessage : '', 
         chatList:[
             {
                 pic:"../img/avatar_1.jpg",
@@ -182,22 +183,12 @@ const app = new Vue({
                 ],
             },
         ],
-        myMessage:[{
-            chat1:[ 'Hai portato a spasso il cane?',
-                    'ricordati di stendere i panni'],
-            chat2:['Ciao non ci sentiamo da tanto','come stai?'],
-            chat3:['Non credo','perché lo so'],
-            chat4:['Oggi sto male','ho la febbre'],
-            chat5:['Ho comprato una radio','mi piaceva'],
-            chat6:['Domani ho la partita','il torneo'],
-            chat7:['Usciamo','bene'],
-            chat8:['Fa freddo oggi','qui piove'],
-        }]
+      
     },
     
     methods: {
-        addText() {
-            
+        addNewMessage() {          
+          console.log(this.newMessage)  
         }
     }
 });

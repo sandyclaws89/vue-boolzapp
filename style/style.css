@@ -264,13 +264,13 @@ body{
     height: calc(90vh - 70px);
     overflow-y: scroll;
     padding-top: 50px;
-    overflow-x:hidden;
 }
 
 .my-chat-box{
     width: 100%;
     align-items: flex-end;
     padding-right: 70px;
+    margin-top: 15px;
 }
 
 .my-chat{
@@ -307,6 +307,7 @@ body{
     width: 100%;
     align-items: flex-start;
     padding-left: 70px;
+    margin-top: 15px;
 }
 .interlocutor-chat span{
     color:#b6b9bb;

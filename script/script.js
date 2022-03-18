@@ -7,6 +7,11 @@ const app = new Vue({
             message: '',
             sent: false,
         },
+        replyMessage: {
+            date: '10/01/2020 15:30:55',
+            message: '',
+            sent: true,
+        },
 
         chatList:[
             {
@@ -198,7 +203,16 @@ const app = new Vue({
         let testVar= this.chatList[this.test].messages;
         testVar.push ({...this.newMessage});
         this.newMessage.message= '';
-       
+
+        let reply = this.replyMessage.message = 'sss';
+        // reply
+        if(!reply.sent){
+            setTimeout (reply, 1000);
+        }
+
+
+        
+           
         }
         // DEVO PUSHARE ALL'ARRAY MESSAGES UN NUOVO OGGETTO CHE ABBIA DATE MESSAGE E STATUS
         // QUINDI DEVO ESPLODERE ARRAY MESSAGES

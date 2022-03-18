@@ -7,6 +7,7 @@ const app = new Vue({
             message: '',
             sent: false,
         },
+
         chatList:[
             {
                 pic:"../img/avatar_1.jpg",
@@ -194,10 +195,10 @@ const app = new Vue({
     methods: {
         addNewMessage(){
         // console.log(this.newMessage)
-        let testVar= this.chatList[this.test].messages[this.test];
-        return testVar1= testVar.push({...this.newMessage});
-            this.newMessage= '';
-            console.log(testVar1)
+        let testVar= this.chatList[this.test].messages;
+        testVar.push(...this.newMessage);
+        this.newMessage= '';
+        // console.log(messageTest)
         }
         // DEVO PUSHARE ALL'ARRAY MESSAGES UN NUOVO OGGETTO CHE ABBIA DATE MESSAGE E STATUS
         // QUINDI DEVO ESPLODERE ARRAY MESSAGES

@@ -200,25 +200,47 @@ const app = new Vue({
     methods: {
         addNewMessage(){
         
-        let testVar= this.chatList[this.test].messages;
-        testVar.push ({...this.newMessage});
+        let messageList= this.chatList[this.test].messages;
+        messageList.push ({...this.newMessage});
         this.newMessage.message= '';
+        let replyMessage = this.replyMessage;
+        /*mi serve dichiaralra fuori perche reply è nested e dentro il this non funziona. con ref ho selezionato tutto il current chat window perché mi serve puntare li per l'effetto che rimanga puntato in basso ad ogni message  */
+        let ref = this.$refs.currentChatWindow;
+        console.log(ref)
 
-        let reply = this.replyMessage.message = 'sss';
+        // let ok
         // reply
-        if(!reply.sent){
-            setTimeout (reply, 1000);
-        }
+        // if(!reply.sent){
+            // console.lo(reply)
+        replyMessage.message = 'ok';
+            setTimeout (reply, 1500);
+            function reply(){
+                // console.log(messageList);
+                messageList.push ({...replyMessage});
+                // console.log(replyMessage)              
+                scrollToEnd();
+            }
+        scrollToEnd();
+            // console.log(this.replyMessage.sent);
+        // }
 
-
+        function scrollToEnd () {
+            ref.scrollTop = ref.scrollHeight;
+            console.log(ref.scrollTop , ref.scrollHeight)
+            /*qui sto settando il punto a cui sono arrivato nello scroll al massimo scroll possibile, questo mi da l'effetto desiderato */
+          }
         
            
-        }
+        },
+        
+
         // DEVO PUSHARE ALL'ARRAY MESSAGES UN NUOVO OGGETTO CHE ABBIA DATE MESSAGE E STATUS
         // QUINDI DEVO ESPLODERE ARRAY MESSAGES
         
     },
 });
+
+
 
 // let bigTest : {
 //     newTest: 'ciao',

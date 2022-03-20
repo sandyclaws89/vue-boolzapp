@@ -97,11 +97,14 @@
           </header>
 
           <!-- CURRENT CHAT WINDOW -->
-          <section class="current-chat-window" >
-            <div v-for="element in chatList[test].messages" class="flex-column" :class="element.sent ? 'interlocutor-chat-box' : 'my-chat-box' ">
-            <!-- MY CHAT -->
+          <section class="current-chat-window" ref="currentChatWindow" >
+            <div v-for="element in chatList[test].messages" class="flex-column" :class="element.sent ? 'interlocutor-chat-box' : 'my-chat-box'" >
+              <!-- <div v-for="element in data" class="flex-column" :class="element.chatList[test].messages[test].sent ?'interlocutor-chat-box' : 'my-chat-box"> -->
+
+            <!--MY CHAT -->
             <!-- FIXME:SE SCRIVO TANTI MESSAGGI NON SO COME FARLO RIMANERE PUNTATO ALL'ULTIMO  -->
               <div :class="element.sent ? 'interlocutor-chat' : 'my-chat'">
+                <!-- <div :class="element.chatList[test].messages[test].sent ?'interlocutor-chat' : 'my-chat'"> -->
                 <div class="flex-column">
                   <div class="flex-row">
                     <p>{{element.message}}</p>
